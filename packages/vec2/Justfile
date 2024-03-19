@@ -1,0 +1,37 @@
+help:
+  @just --list
+
+publish: build upload
+
+# Build, increment patch number and publish
+republish: patch build upload
+
+patch:
+  yarn version --patch
+
+# Publish to npm
+upload:
+  cd dist && npm publish --access public
+  rm -drf dist
+
+# Build package into dist/, copying relevant files
+build: 
+  rm -dr dist || :
+  yarn run build
+  @just copy
+
+# Copy package.json, tsconfig.json and README.md to dist/
+copy:
+  cp package.json dist
+  cp tsconfig.json dist
+  cp README.md dist
+
+# Install a package as both --dev and --peer (pseudo-analogous to python extras)
+extra PACKAGE:
+  yarn add --peer {{PACKAGE}} && yarn add --dev {{PACKAGE}}
+  
+
+# Install react stuff
+install-react:
+  yarn add --dev eslint-plugin-react-hooks
+  yarn add react react-dom --dev @types/react @types/react-dom

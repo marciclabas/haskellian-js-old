@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/moveread/REPO.git"
+    "url": "git+https://github.com/moveread/haskellian-js.git"
   },
   "author": "Marcel Claramunt",
   "license": "ISC",

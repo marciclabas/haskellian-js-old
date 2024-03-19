@@ -1,22 +1,21 @@
 {
-  "name": "@haskellian/sets",
-  "version": "1.0.1",
-  "description": "FP-style utilities for Sets",
+  "name": "@haskellian/vec2",
+  "version": "1.0.0",
+  "description": "Simple FP-style tools for 2d vectors",
   "type": "module",
   "scripts": {
     "build": "npx tsc -p tsconfig.json"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/moveread/haskellian-js.git",
-    "directory": "packages/sets"
+    "url": "git+https://github.com/moveread/haskellian-js.git"
   },
   "author": "Marcel Claramunt",
   "license": "ISC",
   "devDependencies": {
+    "typescript": "",
     "@typescript-eslint/eslint-plugin": "",
     "@typescript-eslint/parser": "",
-    "eslint": "",
-    "typescript": ""
+    "eslint": ""
   }
 }
