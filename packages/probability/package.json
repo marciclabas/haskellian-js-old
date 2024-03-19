@@ -1,0 +1,21 @@
+{
+  "name": "@haskellian/probability",
+  "version": "1.0.1",
+  "description": "Simple probabilistic tools",
+  "type": "module",
+  "scripts": {
+    "build": "npx tsc -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moveread/REPO.git"
+  },
+  "author": "Marcel Claramunt",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "",
+    "@typescript-eslint/parser": "",
+    "eslint": "",
+    "typescript": ""
+  }
+}
