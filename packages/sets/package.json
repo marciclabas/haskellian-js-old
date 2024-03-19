@@ -1,6 +1,6 @@
 {
   "name": "@haskellian/sets",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "FP-style utilities for Sets",
   "type": "module",
   "scripts": {
