@@ -19,7 +19,7 @@
     "skipLibCheck": true,
 
     "paths": {
-      "@haskellian/peano": ["/home/m4rs/mr-github/lib/js/util/haskellian-js/packages/peano/src/index.ts"]
+      // "@haskellian/peano": ["/home/m4rs/mr-github/lib/js/util/haskellian-js/packages/peano/src/index.ts"]
     }
   },
   "include": ["./src"]

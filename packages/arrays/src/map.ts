@@ -1,5 +1,14 @@
 import { Add } from '@haskellian/peano'
 import { NDArray, NDims, ScalarType, Unnest } from "./ndarray.js";
+import { Tup } from '@haskellian/tuples';
+
+export function map2d<T, U>(xxs: T[][], f: (x: T, [i, j]: Tup<2, number>) => U): U[][] {
+  return xxs.map((xs, i) => xs.map((x, j) => f(x, [i, j])))
+}
+
+export function map3d<T, U>(xxxs: T[][][], f: (x: T, [i, j, k]: Tup<3, number>) => U): U[][][] {
+  return xxxs.map((xxs, i) => xxs.map((xs, j) => xs.map((x, k) => f(x, [i, j, k]))))
+}
 
 /** Nested `map` with fixed `depth` over an `N`-dimensional array */
 export function ndmap<
