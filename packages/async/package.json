@@ -1,7 +1,7 @@
 {
-  "name": "@haskellian/tuples",
-  "version": "1.0.10",
-  "description": "Type-safe sized tuples",
+  "name": "@haskellian/async",
+  "version": "1.0.0",
+  "description": "Functional tools for Promises and AsyncIterables",
   "type": "module",
   "scripts": {
     "build": "npx tsc -p tsconfig.json"
@@ -13,12 +13,13 @@
   "author": "Marcel Claramunt",
   "license": "ISC",
   "devDependencies": {
-    "@types/ramda": "^0.29.11",
     "@typescript-eslint/eslint-plugin": "",
     "@typescript-eslint/parser": "",
     "eslint": "",
-    "ramda": "^0.29.1",
+    "react": "^18.2.0",
     "typescript": ""
   },
-  "dependencies": {}
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
 }
