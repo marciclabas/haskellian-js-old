@@ -1,5 +1,6 @@
 mod sets "packages/sets/Justfile"
 mod probability "packages/probability/Justfile"
 mod vec2 "packages/vec2/Justfile"
-mod oneOrTwo "packages/1or2/Justfile"
 mod tuples "packages/tuples/Justfile"
+mod arrays "packages/arrays/Justfile"
+mod peano "packages/peano/Justfile"

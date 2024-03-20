@@ -1,6 +1,6 @@
 {
-  "name": "arrays",
-  "version": "1.0.0",
+  "name": "@haskellian/arrays",
+  "version": "1.0.3",
   "description": "Simple FP-style Array tools",
   "type": "module",
   "scripts": {
@@ -8,14 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/moveread/REPO.git"
+    "url": "git+https://github.com/moveread/haskellianjs.git"
   },
   "author": "Marcel Claramunt",
   "license": "ISC",
   "devDependencies": {
-    "typescript": "",
     "@typescript-eslint/eslint-plugin": "",
     "@typescript-eslint/parser": "",
-    "eslint": ""
+    "eslint": "",
+    "typescript": ""
+  },
+  "dependencies": {
+    "@haskellian/peano": "^1.0.0"
   }
 }

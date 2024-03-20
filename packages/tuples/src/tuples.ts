@@ -1,12 +1,7 @@
-import { Dec } from "./numbers.js"
-
-type _Tup<N extends number, T = any, A extends T[] = []> =
-  A['length'] extends N
-    ? A
-    : _Tup<N, T, [...A, T]>
+import { Dec, peano } from '@haskellian/peano'
 
 /** An `N`-tuple (an array of length `N`) */
-export type Tup<N extends number, T = any> = _Tup<N, T>
+export type Tup<N extends number, T = any> = peano.Nat<N, T>
 
 /** A `Tup` with typed array methods */
 export type MTup<N extends number, T = any> = Omit<Tup<N, T>, 'map' | 'filter'> & {

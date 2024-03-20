@@ -38,3 +38,19 @@ install-react:
 
 install-ramda:
   yarn add ramda --dev @types/ramda
+
+# Convert *.js to *.ts imports
+denify:
+  #!/bin/bash
+  for file in $(find src -type f); do
+    sed -i -E 's/(.js)(["\'])/.ts\2/g' $file #'
+  done
+  mv .deno.json deno.json || touch deno.json
+
+# Convert *.js to *.js imports
+nodify:
+  #!/bin/bash
+  for file in $(find src -type f); do
+    sed -i -E "s/(.ts)([\"'])/.js\2/g" $file #'
+  done
+  mv deno.json .deno.json || :

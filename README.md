@@ -4,7 +4,9 @@
 
 ## Packages
 
+- [`peano`](packages/peano/README.md)
+- [`tuples`](packages/tuples/README.md)
+- [`arrays`](packages/arrays/README.md)
 - [`vec2`](packages/vec2/README.md)
 - [`sets`](packages/sets/README.md)
 - [`probability`](packages/probability/README.md)
-- [`1or2`](packages/1or2/README.md)
