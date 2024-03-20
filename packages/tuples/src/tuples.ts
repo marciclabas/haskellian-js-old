@@ -1,4 +1,4 @@
-import { Dec } from '@haskellian/peano'
+import { Dec } from "./numbers.js"
 
 type _Tup<N extends number, T = any, A extends T[] = []> =
   A['length'] extends N

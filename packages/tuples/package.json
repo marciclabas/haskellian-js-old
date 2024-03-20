@@ -1,6 +1,6 @@
 {
   "name": "@haskellian/tuples",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "Type-safe sized tuples",
   "type": "module",
   "scripts": {
@@ -20,7 +20,5 @@
     "ramda": "^0.29.1",
     "typescript": ""
   },
-  "dependencies": {
-    "@haskellian/peano": "^1.0.1"
-  }
+  "dependencies": {}
 }
