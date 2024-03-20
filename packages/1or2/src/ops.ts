@@ -1,4 +1,4 @@
-import { transpose as transpose_ } from "ramda"
+import { transpose as transpose_ } from "../node_modules/@types/ramda/index.js"
 import { Pair1, MPair1 } from "./type.js"
 
 export function transpose<T>(xs: Pair1<T[]>): Pair1<T>[]

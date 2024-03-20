@@ -1,0 +1,23 @@
+{
+  "name": "@haskellian/tuples",
+  "version": "1.0.0",
+  "description": "Type-safe sized tuples",
+  "type": "module",
+  "scripts": {
+    "build": "npx tsc -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moveread/REPO.git"
+  },
+  "author": "Marcel Claramunt",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/ramda": "^0.29.11",
+    "@typescript-eslint/eslint-plugin": "",
+    "@typescript-eslint/parser": "",
+    "eslint": "",
+    "ramda": "^0.29.1",
+    "typescript": ""
+  }
+}
