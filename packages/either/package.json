@@ -1,14 +1,14 @@
 {
-  "name": "@haskellian/arrays",
-  "version": "1.0.10",
-  "description": "Simple FP-style Array tools",
+  "name": "@haskellian/either",
+  "version": "1.0.3",
+  "description": "Simple Either type",
   "type": "module",
   "scripts": {
     "build": "npx tsc -p tsconfig.json"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/moveread/haskellianjs.git"
+    "url": "git+https://github.com/moveread/REPO.git"
   },
   "author": "Marcel Claramunt",
   "license": "ISC",
@@ -17,9 +17,5 @@
     "@typescript-eslint/parser": "",
     "eslint": "",
     "typescript": ""
-  },
-  "dependencies": {
-    "@haskellian/peano": "^1.0.0",
-    "@haskellian/tuples": "^1.0.5"
   }
 }

@@ -1,0 +1,3 @@
+# Either
+
+> Simple Either type

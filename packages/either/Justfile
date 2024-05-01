@@ -1,0 +1,64 @@
+PKG := "."
+
+help:
+  @just --list
+
+publish: build upload
+
+# Build, increment patch number and publish
+republish: patch build upload
+
+patch:
+  cd {{PKG}} && yarn version --patch
+
+# Publish to npm
+upload:
+  cd {{PKG}}/dist && npm publish --access=public
+  cd {{PKG}} && rm -drf dist
+
+# Build package into dist/, copying relevant files
+build: 
+  cd {{PKG}} && \
+  (rm -dr dist || :) && \
+  yarn run build
+  @just copy
+
+# Copy package.json, tsconfig.json and README.md to dist/
+copy:
+  cd {{PKG}} && \
+  cp package.json dist && \
+  cp tsconfig.json dist && \
+  cp README.md dist
+
+# Install a package as both --dev and --peer (pseudo-analogous to python extras)
+extra PACKAGE:
+  cd {{PKG}} && \
+  yarn add --peer {{PACKAGE}} && yarn add --dev {{PACKAGE}}
+  
+
+# Install react stuff
+install-react:
+  cd {{PKG}} && \
+  yarn add --dev eslint-plugin-react-hooks
+  cd {{PKG}} && \
+  yarn add react react-dom --dev @types/react @types/react-dom
+
+install-ramda:
+  cd {{PKG}} && \
+  yarn add ramda --dev @types/ramda
+
+# Convert *.js to *.ts imports
+denify:
+  #!/bin/bash
+  for file in $(find {{PKG}}/src -type f); do
+    sed -i -E 's/(.js)(["\'])/.ts\2/g' $file #'
+  done
+  mv .deno.json deno.json || touch deno.json
+
+# Convert *.js to *.js imports
+nodify:
+  #!/bin/bash
+  for file in $(find {{PKG}}/src -type f); do
+    sed -i -E "s/(.ts)([\"'])/.js\2/g" $file #'
+  done
+  mv deno.json .deno.json || :

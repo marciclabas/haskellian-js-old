@@ -1,7 +1,7 @@
 {
-  "name": "@haskellian/async",
-  "version": "1.0.2",
-  "description": "Functional tools for Promises and AsyncIterables",
+  "name": "@haskellian/isclose",
+  "version": "1.0.0",
+  "description": "Like `np.isclose`",
   "type": "module",
   "scripts": {
     "build": "npx tsc -p tsconfig.json"
@@ -13,13 +13,9 @@
   "author": "Marcel Claramunt",
   "license": "ISC",
   "devDependencies": {
+    "typescript": "",
     "@typescript-eslint/eslint-plugin": "",
     "@typescript-eslint/parser": "",
-    "eslint": "",
-    "react": "^18.2.0",
-    "typescript": ""
-  },
-  "peerDependencies": {
-    "react": "^18.2.0"
+    "eslint": ""
   }
 }
